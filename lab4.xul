@@ -1,0 +1,943 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <!-- your code here -->
+<!--  barra de herramientas -->
+<vbox flex="0">
+    <hbox flex="1">
+        <vbox flex="1" class="test_b">
+            <toolbox>
+                <menubar id="theMenubar">
+                    <menu id="basedatos" label="basedatos">
+                        <menupopup id="m2-popup">
+                        <menuitem label="Menu item 2-1"/>
+                        <menuitem label="Menu item 2-2"/>
+                        </menupopup>
+                    </menu>
+                    <menu id="tabla" label="tabla">
+                        <menupopup id="m2-popup">
+                        <menuitem label="Menu item 2-1"/>
+                        <menuitem label="Menu item 2-2"/>
+                        </menupopup>
+
+                    </menu>
+                    <menu id="indice" label="indice">
+                        <menupopup id="m2-popup">
+                        <menuitem label="Menu item 2-1"/>
+                        <menuitem label="Menu item 2-2"/>
+                        </menupopup>
+
+                    </menu>
+                    <menu id="vista" label="vista">
+                        <menupopup id="m2-popup">
+                        <menuitem label="Menu item 2-1"/>
+                        <menuitem label="Menu item 2-2"/>
+                        </menupopup>
+
+                    </menu>
+                    <menu id="triggers" label="triggers">
+                        <menupopup id="m2-popup">
+                        <menuitem label="Menu item 2-1"/>
+                        <menuitem label="Menu item 2-2"/>
+                        </menupopup>
+
+                    </menu>
+                    <menu id="herramientas" label="herramientas (o)">
+                        <menupopup id="m2-popup">
+                        <menuitem label="Menu item 2-1"/>
+                        <menuitem label="Menu item 2-2"/>
+                        </menupopup>
+
+                    </menu>
+                    <menu id="ayuda" label="ayuda">
+                        <menupopup id="m2-popup">
+                        <menuitem label="Menu item 2-1"/>
+                        <menuitem label="Menu item 2-2"/>
+                        </menupopup>
+
+                    </menu>
+                </menubar>
+            </toolbox>
+        </vbox>
+    </hbox>
+    <vbox flex="0" class="test_a">
+        <toolbox >
+            <toolbar orient="horizontal" id="theToolbar">
+                <toolbarbutton label="refrescar" image="buttonIcon.png"/>
+                <toolbarbutton label="heramientas" image="buttonIcon.png"/>
+                <toolbarbutton label="nuevo" image="buttonIcon.png"/>
+                <toolbarbutton label="abrir" image="buttonIcon.png"/>
+                <toolbarbutton label="descargar" image="buttonIcon.png"/>
+                <toolbarbutton label="funcion" image="buttonIcon.png"/>
+                <toolbarbutton label="nueva tabla" image="buttonIcon.png"/>
+                <toolbarbutton label="eliminar tabla" image="buttonIcon.png"/>
+                <toolbarbutton label="nueva columna" image="buttonIcon.png"/>
+                <toolbarbutton label="eliminar columna" image="buttonIcon.png"/>
+                <button label="Carpeta"/>
+                      <menulist flex="0">
+                            <menupopup >
+                                <menuitem value="{usa}" label="seleccionar perfil de bases de datos"/>
+                                <menuitem value="{canada}" label="2"/>
+                                <menuitem value="{argentina}" label="3"/>
+                                <menuitem value="{espanha}" label="4"/>
+                                <menuitem value="{espanha}" label="5"/>
+                                <menuitem value="{espanha}" label="6"/>
+                            </menupopup>
+                        </menulist>
+                <toolbarbutton label="ir"/>
+            </toolbar>
+        </toolbox>
+    </vbox>
+</vbox>
+<!--  barra de herramientas -->
+
+
+<!--  arbol -->
+
+<hbox flex="1"  height = "500" >
+
+<vbox flex="0" class="test_b"  width = "200">
+    <menulist flex="0">
+        <menupopup >
+            <menuitem value="{usa}" label="sim. sqlite"/>
+            <menuitem value="{canada}" label="2"/>
+            <menuitem value="{argentina}" label="3"/>
+            <menuitem value="{espanha}" label="4"/>
+            <menuitem value="{espanha}" label="5"/>
+            <menuitem value="{espanha}" label="6"/>
+        </menupopup>
+    </menulist>
+    <tree flex="1" rows="6">
+        <treecols>
+            <treecol label="panel" primary="true" flex="2"/>
+        </treecols>
+        <treechildren>
+            <!-- tree item for cat 1 node -->
+
+    <treeitem container="true" open="true">
+                <treerow>
+                    <treecell label="Mater Table (1)"/>
+                </treerow>
+                <!-- tree children for first category -->
+                <treechildren>
+                <treeitem container="true" open="true">
+                <treerow>
+                    <treecell label="Category 1"/>
+                </treerow>
+                <!-- tree children for first category -->
+                <treechildren>
+                <treeitem container="true" open="true">
+                    <treerow>
+                        <treecell label="Cat 1 - Sub cat 1"/>
+                        <treecell label="Value 1"/>
+                    </treerow>
+                </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                </treechildren>
+                <!-- end tree children for first category -->
+            </treeitem>
+                <treeitem container="true" open="true">
+                <treerow>
+                    <treecell label="Category 1"/>
+                </treerow>
+                <!-- tree children for first category -->
+                <treechildren>
+                <treeitem container="true" open="true">
+                    <treerow>
+                        <treecell label="Cat 1 - Sub cat 1"/>
+                        <treecell label="Value 1"/>
+                    </treerow>
+                </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                </treechildren>
+                <!-- end tree children for first category -->
+            </treeitem>
+                </treechildren>
+                <!-- end tree children for first category -->
+            </treeitem>
+<!-- ========================================================================= -->
+            <treeitem container="true" open="true">
+                <treerow>
+                    <treecell label="tables (21)"/>
+                </treerow>
+                <!-- tree children for first category -->
+                <treechildren>
+                <treeitem container="true" open="true">
+                <treerow>
+                    <treecell label="Edificacion"/>
+                </treerow>
+                <!-- tree children for first category -->
+                <treechildren>
+                <treeitem container="true" open="true">
+                    <treerow>
+                        <treecell label="Cat 1 - Sub cat 1"/>
+                        <treecell label="Value 1"/>
+                    </treerow>
+                </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                </treechildren>
+                <!-- end tree children for first category -->
+            </treeitem>
+           
+           
+                            <treeitem container="true" open="true">
+                <treerow>
+                    <treecell label="exoneracion"/>
+                </treerow>
+                <!-- tree children for first category -->
+                <treechildren>
+                <treeitem container="true" open="true">
+                    <treerow>
+                        <treecell label="Cat 1 - Sub cat 1"/>
+                        <treecell label="Value 1"/>
+                    </treerow>
+                </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                </treechildren>
+                <!-- end tree children for first category -->
+            </treeitem>
+           
+           
+            <treeitem container="true" open="true">
+                <treerow>
+                    <treecell label="factores"/>
+                </treerow>
+                <!-- tree children for first category -->
+                <treechildren>
+                <treeitem container="true" open="true">
+                    <treerow>
+                        <treecell label="Cat 1 - Sub cat 1"/>
+                        <treecell label="Value 1"/>
+                    </treerow>
+                </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                </treechildren>
+                <!-- end tree children for first category -->
+            </treeitem>
+           
+           
+                    <treeitem container="true" open="true">
+                <treerow>
+                    <treecell label="finca"/>
+                </treerow>
+                <!-- tree children for first category -->
+                <treechildren>
+                <treeitem container="true" open="true">
+                    <treerow>
+                        <treecell label="Cat 1 - Sub cat 1"/>
+                        <treecell label="Value 1"/>
+                    </treerow>
+                </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                </treechildren>
+                <!-- end tree children for first category -->
+            </treeitem>
+           
+           
+           
+           
+                        <treeitem container="true" open="true">
+                <treerow>
+                    <treecell label="fincas"/>
+                </treerow>
+                <!-- tree children for first category -->
+                <treechildren>
+                <treeitem container="true" open="true">
+                    <treerow>
+                        <treecell label="Cat 1 - Sub cat 1"/>
+                        <treecell label="Value 1"/>
+                    </treerow>
+                </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                </treechildren>
+                <!-- end tree children for first category -->
+            </treeitem>
+           
+           
+           
+           
+                        <treeitem container="true" open="true">
+                <treerow>
+                    <treecell label="fincas2"/>
+                </treerow>
+                <!-- tree children for first category -->
+                <treechildren>
+                <treeitem container="true" open="true">
+                    <treerow>
+                        <treecell label="Cat 1 - Sub cat 1"/>
+                        <treecell label="Value 1"/>
+                    </treerow>
+                </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                </treechildren>
+                <!-- end tree children for first category -->
+            </treeitem>
+           
+           
+                        <treeitem container="true" open="true">
+                <treerow>
+                    <treecell label="fincas3"/>
+                </treerow>
+                <!-- tree children for first category -->
+                <treechildren>
+                <treeitem container="true" open="true">
+                    <treerow>
+                        <treecell label="Cat 1 - Sub cat 1"/>
+                        <treecell label="Value 1"/>
+                    </treerow>
+                </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                </treechildren>
+                <!-- end tree children for first category -->
+            </treeitem>
+            <treeitem container="true" open="true">
+                <treerow>
+                    <treecell label="geo edificacion"/>
+                </treerow>
+                <!-- tree children for first category -->
+                <treechildren>
+                <treeitem container="true" open="true">
+                    <treerow>
+                        <treecell label="Cat 1 - Sub cat 1"/>
+                        <treecell label="Value 1"/>
+                    </treerow>
+                </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                </treechildren>
+                <!-- end tree children for first category -->
+            </treeitem>
+           
+                <treeitem container="true" open="true">
+                <treerow>
+                    <treecell label="geofincas"/>
+                </treerow>
+                <!-- tree children for first category -->
+                <treechildren>
+                <treeitem container="true" open="true">
+                    <treerow>
+                        <treecell label="Cat 1 - Sub cat 1"/>
+                        <treecell label="Value 1"/>
+                    </treerow>
+                </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                </treechildren>
+                <!-- end tree children for first category -->
+            </treeitem>
+           
+                    <treeitem container="true" open="true">
+                <treerow>
+                    <treecell label="geometrias"/>
+                </treerow>
+                <!-- tree children for first category -->
+                <treechildren>
+                <treeitem container="true" open="true">
+                    <treerow>
+                        <treecell label="Cat 1 - Sub cat 1"/>
+                        <treecell label="Value 1"/>
+                    </treerow>
+                </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                </treechildren>
+                <!-- end tree children for first category -->
+            </treeitem>
+           
+                    <treeitem container="true" open="true">
+                <treerow>
+                    <treecell label="geoterrenos"/>
+                </treerow>
+                <!-- tree children for first category -->
+                <treechildren>
+                <treeitem container="true" open="true">
+                    <treerow>
+                        <treecell label="Cat 1 - Sub cat 1"/>
+                        <treecell label="Value 1"/>
+                    </treerow>
+                </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                </treechildren>
+                <!-- end tree children for first category -->
+            </treeitem>
+           
+                <treeitem container="true" open="true">
+                <treerow>
+                    <treecell label="lote tipo"/>
+                </treerow>
+                <!-- tree children for first category -->
+                <treechildren>
+                <treeitem container="true" open="true">
+                    <treerow>
+                        <treecell label="Cat 1 - Sub cat 1"/>
+                        <treecell label="Value 1"/>
+                    </treerow>
+                </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                </treechildren>
+                <!-- end tree children for first category -->
+            </treeitem>
+           
+                <treeitem container="true" open="true">
+                <treerow>
+                    <treecell label="movimientos"/>
+                </treerow>
+                <!-- tree children for first category -->
+                <treechildren>
+                <treeitem container="true" open="true">
+                    <treerow>
+                        <treecell label="Cat 1 - Sub cat 1"/>
+                        <treecell label="Value 1"/>
+                    </treerow>
+                </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                </treechildren>
+                <!-- end tree children for first category -->
+            </treeitem>
+           
+           
+                <treeitem container="true" open="true">
+                <treerow>
+                    <treecell label="propieta"/>
+                </treerow>
+                <!-- tree children for first category -->
+                <treechildren>
+                <treeitem container="true" open="true">
+                    <treerow>
+                        <treecell label="Cat 1 - Sub cat 1"/>
+                        <treecell label="Value 1"/>
+                    </treerow>
+                </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                </treechildren>
+                <!-- end tree children for first category -->
+            </treeitem>
+           
+           
+                <treeitem container="true" open="true">
+                <treerow>
+                    <treecell label="propietario"/>
+                </treerow>
+                <!-- tree children for first category -->
+                <treechildren>
+                <treeitem container="true" open="true">
+                    <treerow>
+                        <treecell label="Cat 1 - Sub cat 1"/>
+                        <treecell label="Value 1"/>
+                    </treerow>
+                </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                </treechildren>
+                <!-- end tree children for first category -->
+            </treeitem>
+           
+                <treeitem container="true" open="true">
+                <treerow>
+                    <treecell label="representante"/>
+                </treerow>
+                <!-- tree children for first category -->
+                <treechildren>
+                <treeitem container="true" open="true">
+                    <treerow>
+                        <treecell label="Cat 1 - Sub cat 1"/>
+                        <treecell label="Value 1"/>
+                    </treerow>
+                </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                </treechildren>
+                <!-- end tree children for first category -->
+            </treeitem>
+           
+           
+                <treeitem container="true" open="true">
+                <treerow>
+                    <treecell label="spatial_ref_sys"/>
+                </treerow>
+                <!-- tree children for first category -->
+                <treechildren>
+                <treeitem container="true" open="true">
+                    <treerow>
+                        <treecell label="Cat 1 - Sub cat 1"/>
+                        <treecell label="Value 1"/>
+                    </treerow>
+                </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                </treechildren>
+                <!-- end tree children for first category -->
+            </treeitem>
+           
+                <treeitem container="true" open="true">
+                <treerow>
+                    <treecell label="terreno"/>
+                </treerow>
+                <!-- tree children for first category -->
+                <treechildren>
+                <treeitem container="true" open="true">
+                    <treerow>
+                        <treecell label="Cat 1 - Sub cat 1"/>
+                        <treecell label="Value 1"/>
+                    </treerow>
+                </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                </treechildren>
+                <!-- end tree children for first category -->
+            </treeitem>
+           
+                <treeitem container="true" open="true">
+                <treerow>
+                    <treecell label="valoraedifica"/>
+                </treerow>
+                <!-- tree children for first category -->
+                <treechildren>
+                <treeitem container="true" open="true">
+                    <treerow>
+                        <treecell label="Cat 1 - Sub cat 1"/>
+                        <treecell label="Value 1"/>
+                    </treerow>
+                </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                </treechildren>
+                <!-- end tree children for first category -->
+            </treeitem>
+           
+                <treeitem container="true" open="true">
+                <treerow>
+                    <treecell label="valoracion"/>
+                </treerow>
+                <!-- tree children for first category -->
+                <treechildren>
+                <treeitem container="true" open="true">
+                    <treerow>
+                        <treecell label="Cat 1 - Sub cat 1"/>
+                        <treecell label="Value 1"/>
+                    </treerow>
+                </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                </treechildren>
+                <!-- end tree children for first category -->
+            </treeitem>
+           
+                <treeitem container="true" open="true">
+                <treerow>
+                    <treecell label="otros"/>
+                </treerow>
+                <!-- tree children for first category -->
+                <treechildren>
+                <treeitem container="true" open="true">
+                    <treerow>
+                        <treecell label="Cat 1 - Sub cat 1"/>
+                        <treecell label="Value 1"/>
+                    </treerow>
+                </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                </treechildren>
+                <!-- end tree children for first category -->
+            </treeitem>
+           
+           
+                <treeitem container="true" open="true">
+                <treerow>
+                    <treecell label="otros1"/>
+                </treerow>
+                <!-- tree children for first category -->
+                <treechildren>
+                <treeitem container="true" open="true">
+                    <treerow>
+                        <treecell label="Cat 1 - Sub cat 1"/>
+                        <treecell label="Value 1"/>
+                    </treerow>
+                </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                </treechildren>
+                <!-- end tree children for first category -->
+            </treeitem>
+           
+           
+                <treeitem container="true" open="true">
+                <treerow>
+                    <treecell label="otros2"/>
+                </treerow>
+                <!-- tree children for first category -->
+                <treechildren>
+                <treeitem container="true" open="true">
+                    <treerow>
+                        <treecell label="Cat 1 - Sub cat 1"/>
+                        <treecell label="Value 1"/>
+                    </treerow>
+                </treeitem>
+                    <treeitem container="true" open="true">
+                        <treerow>
+                            <treecell label="Cat 1 - Sub cat 2"/>
+                            <treecell label="Value 2"/>
+                        </treerow>
+                    </treeitem>
+                </treechildren>
+                <!-- end tree children for first category -->
+            </treeitem>
+           
+                </treechildren>
+                <!-- end tree children for first category -->
+            </treeitem>
+        </treechildren>
+      
+    </tree>
+</vbox>
+
+<!--                ==============================     -->
+
+
+
+<tabbox flex="0">
+    <tabs>
+        <tab label="escritura"/>
+        <tab label="explorar y buscar"/>
+        <tab label="ejecutar sql"/>
+        <tab label="configuracion nbd"/>
+    </tabs>
+    <tabpanels flex="0">
+        <tabpanel id="escritura">
+            <vbox flex="1">                   
+                <label value="escritura"/>
+            </vbox>
+        </tabpanel>
+        <tabpanel id="explorar">
+            <vbox flex="1">
+                                            <!-- Icontenido dos -->
+ 
+<vbox>
+
+<hbox>
+<label  value="Master"/>
+<textbox value="sqlite master"/>
+<button label="buscar (h)"/>
+<button label="mostrar todo"/>
+<button label="añadir"/>
+<button label="duplicar"/>
+<button label="editar"/>
+<button label="elimiar"/>
+</hbox>
+
+<hbox flex="1" class="test_b">
+    <listbox>
+        <listhead>
+            <listheader label="rowid"/>
+            <listheader label="tipe"/>
+            <listheader label="name"/>
+            <listheader label="tbl_name"/>
+            <listheader label="root_page"/>
+        </listhead>
+        <listcols>
+            <listcol/>
+            <listcol/>
+            <listcol/>
+            <listcol/>
+            <listcol flex="1"/>
+        </listcols>
+<listitem>
+            <listcell label="1"/>
+            <listcell label="table"/>
+            <listcell label="goemetri_colunm"/>
+            <listcell label="goemetri_colunm"/>
+            <listcell label="2"/>
+        </listitem>
+<listitem>
+            <listcell label="1"/>
+            <listcell label="table"/>
+            <listcell label="goemetri_colunm"/>
+            <listcell label="goemetri_colunm"/>
+            <listcell label="2"/>
+        </listitem>
+<listitem>
+            <listcell label="1"/>
+            <listcell label="table"/>
+            <listcell label="goemetri_colunm"/>
+            <listcell label="goemetri_colunm"/>
+            <listcell label="2"/>
+        </listitem>
+<listitem>
+            <listcell label="1"/>
+            <listcell label="table"/>
+            <listcell label="goemetri_colunm"/>
+            <listcell label="goemetri_colunm"/>
+            <listcell label="2"/>
+        </listitem>
+<listitem>
+            <listcell label="1"/>
+            <listcell label="table"/>
+            <listcell label="goemetri_colunm"/>
+            <listcell label="goemetri_colunm"/>
+            <listcell label="2"/>
+        </listitem>
+<listitem>
+            <listcell label="1"/>
+            <listcell label="table"/>
+            <listcell label="goemetri_colunm"/>
+            <listcell label="goemetri_colunm"/>
+            <listcell label="2"/>
+        </listitem>
+<listitem>
+            <listcell label="1"/>
+            <listcell label="table"/>
+            <listcell label="goemetri_colunm"/>
+            <listcell label="goemetri_colunm"/>
+            <listcell label="2"/>
+        </listitem>
+<listitem>
+            <listcell label="1"/>
+            <listcell label="table"/>
+            <listcell label="goemetri_colunm"/>
+            <listcell label="goemetri_colunm"/>
+            <listcell label="2"/>
+        </listitem>
+<listitem>
+            <listcell label="1"/>
+            <listcell label="table"/>
+            <listcell label="goemetri_colunm"/>
+            <listcell label="goemetri_colunm"/>
+            <listcell label="2"/>
+        </listitem>
+
+    </listbox>
+</hbox>
+
+
+
+
+
+
+
+
+
+
+
+<hbox>
+<button label="regresar todo"/>
+<button label="regresar"/>
+
+<label value="1 para 44 de 44"/>
+
+
+<button label="adelantar"/>
+<button label="adelantar todo"/>
+</hbox>
+
+
+
+</vbox>
+
+
+
+
+
+
+
+
+                                            <!-- Fcontenido dos -->
+            </vbox>
+        </tabpanel>
+        <tabpanel id="ejecutar">
+            <vbox flex="1">
+                <label value="ejecutar"/>
+            </vbox>
+        </tabpanel>
+       
+        <tabpanel id="configuracion">
+            <vbox flex="1">
+                                            <!-- Icontenido tres -->
+                <label value="configuracion"/>
+                                            <!-- Fcontenido tres -->
+            </vbox>
+        </tabpanel>
+       
+       
+       
+    </tabpanels>
+</tabbox>
+<!-- -->
+</hbox>
+
+<!--  arbol -->
+
+
+
+
+
+</window>
