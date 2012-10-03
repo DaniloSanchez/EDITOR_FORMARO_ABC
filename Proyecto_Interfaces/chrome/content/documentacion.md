@@ -45,9 +45,10 @@ para cargar un xml debera de \n
 
 Ejemplos de datos a utilizar como pruebas
 --------
-para archivos .abc puede utilizar este codigo.
-
-para archivos .xml puede utilizar este ejemplo.
+para archivos .abc puede utilizar este codigo.\n
+prueba.abc
+para archivos .xml puede utilizar este ejemplo.\n
+"The Legacy Jig.xml"
 Limitaciones observadas y posibles mejoras (lista TO DO).
 --------
 La libreria funcion correctamente en html, pero no en xul.\n
