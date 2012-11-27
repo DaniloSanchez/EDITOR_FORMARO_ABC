@@ -48,7 +48,9 @@ Forma de compilación, ejecución y utilización de la aplicación.
 --------
 
 Abrir el cmd de windows y localizarlo en la carpeta.
+
 1. compilar el coffeescript con la instruccion coffee -c main.coffee para crear el archivo main.js
+
 2. poner entre comillas la direccion de mozilla seguido de -app y nuevamente la direccion entre comillas de application.ini
 
 para utilizar la aplicacion usted debera:
