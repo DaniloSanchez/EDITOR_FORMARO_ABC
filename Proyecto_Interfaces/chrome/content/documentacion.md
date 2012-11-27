@@ -30,17 +30,15 @@ Definición de estructuras de datos (formato) utilizadas
 En este caso las estructura de datos utilizadas son abc  y xml para mostrarlo en el arbol. 
 el estandar oficial  se llama abc standard v1.6. el cual es descripcion textual de la sintaxis abc. 
 La notacion musical abc es un lenguaje de escritura musical que se representa por medio del codigo ASCII. 
-Inicialmente este formato fue creado para musica folk, la cual musicalmente no es muy compleja, ya que esta compuesta por melodias de una sola voz, 
-y que puede ser escrita en una una sola linea de pentagrama con notacion musical estandar. La sintaxis permite la utilizacion de metadata para cada tono. \n
-puesto que la escritura del ABC es en codigo ASCII, la edicion del mismo se puede hacer en cualquier editor de texto aunque actualmente existen software de distribucion mayormente libre. \n\n
+Inicialmente este formato fue creado para musica folk, la cual musicalmente no es muy compleja, ya que esta compuesta por melodias de una sola voz,y que puede ser escrita en una una sola linea de pentagrama con notacion musical estandar. La sintaxis permite la utilizacion de metadata para cada tono, puesto que la escritura del ABC es en codigo ASCII, la edicion del mismo se puede hacer en cualquier editor de texto aunque actualmente existen software de distribucion mayormente libre.
 el formato abc lo podemos dividir en dos grandes secciones, en la que la primera parte seria el encabezado y la segunda la escritura del texto. 
-En la parte de encabezado tenemos diferentes partes entre las que podemos destacar como importantes:
+##En la parte de encabezado tenemos diferentes partes entre las que podemos destacar como importantes:##
 1. index: indica el numero de pista. 
 2. titulo: es el nombre de la cancion 
 3. tipo de melodia: que tipo de musica se escribira. 
 4. compas: metrica que  tendra la cancion.
 5. clave: se definida la tonalidad de la musica. 
-como segunda parte del formato en la edicion podemos destacar:
+##como segunda parte del formato en la edicion podemos destacar:##
 1. notas: existen las 7 notas musicales, desde do hasta si. 
 2. silencios: cada simbolo relacionado a las notas. 
 3. arreglos: son elementos de la musica que poseen una representacion en abc. 
