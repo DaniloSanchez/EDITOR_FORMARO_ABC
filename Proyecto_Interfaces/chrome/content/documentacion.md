@@ -43,7 +43,7 @@ el formato abc lo podemos dividir en dos grandes secciones, en la que la primera
 2. silencios: cada simbolo relacionado a las notas. 
 3. arreglos: son elementos de la musica que poseen una representacion en abc. 
 4. compases, barras de repeticion: Las definiciones musicales basicas para la correcta escritura de una partitura, tiene su simbologia en formato abc.
-Forma de compilación, ejecución y utilización de la aplicación
+##Forma de compilación, ejecución y utilización de la aplicación##
 --------
 abrir el cmd de windows y localizarlo en la carpeta\n
 1. compilar el coffeescript con la instruccion coffee -c main.coffee para crear el archivo main.js
